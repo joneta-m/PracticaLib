@@ -1,12 +1,12 @@
-ion-toolbar{
-    --background: #f4b662;
-}
-
-
-ion-icon{  
-    color : #444444;
-}
-
+.header {
+    padding: 10px;
+    text-align: left;
+    background: #f4aa45;
+    color: black;
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+  }
 ion-item{
     .titulo{
         font-family: 'Poppins', sans-serif;
@@ -17,10 +17,11 @@ ion-item{
     .subtitulo{
         font-family: 'Poppins', sans-serif;
         font-size: 18px;
+        font-weight: bold;
     }
     .normal{
         font-family: 'Poppins', sans-serif;
         font-size: 12px;
     }
-}
+  }
 

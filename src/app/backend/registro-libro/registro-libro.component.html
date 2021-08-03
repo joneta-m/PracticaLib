@@ -1,0 +1,67 @@
+<div class = "header">
+  <h1>Librarian UPT</h1>
+</div> 
+<br>
+<ion-content>
+  <ion-item>
+    <ion-label class = "titulo">Libros</ion-label>
+    <ion-input class = "subtitulo" placeholder="Buscar" slot = "end"><ion-icon name="search-outline"></ion-icon></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label class = "normal">Título</ion-label>
+    <ion-label class = "normal">Autor</ion-label>
+    <ion-label class = "normal">Signatura</ion-label>
+  </ion-item>
+<ion-item *ngFor = "let libro of libros">
+  <ion-label class = "subtitulo"> {{libro.titulo}} </ion-label>
+  <ion-label class = "subtitulo"> {{libro.autor}} </ion-label>
+  <ion-label class = "subtitulo"> {{libro.st}} </ion-label>
+  <ion-buttons>
+    <ion-button [routerLink] = " [('/info_libro')] " slot = "end" class = "normal" color = "primary">Ver</ion-button>
+  </ion-buttons>
+  
+</ion-item>
+<div style="text-align : end; margin : 10px">
+  <ion-button (click) = "nuevoLibro()" class = "subtitulo" color = "light">Agregar un libro</ion-button>
+</div>
+<div *ngIf = "enableNewLibro">
+  <ion-item>
+    <ion-button  (click) = "enableNewLibro = false" color = "light" slot = "end"><ion-icon name="close-circle-outline" style="text-align : end; margin : 10px"></ion-icon></ion-button>
+  </ion-item>
+<ion-card>
+  <ion-item>
+    <ion-label class = "titulo">Agregar un libro a la colección</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label class= "subtitulo" position="floating">Signatura Topológica:</ion-label>
+    <ion-input [(ngModel)] = "signat" class = "normal" type = "text" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label class= "subtitulo" position="floating">Título:</ion-label>
+    <ion-input [(ngModel)] = "titulo" class = "normal" type = "text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label class= "subtitulo" position="floating">Tema:</ion-label>
+    <ion-input [(ngModel)] = "tema" class = "normal" type = "text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label class= "subtitulo" position="floating">Autor:</ion-label>
+    <ion-input [(ngModel)] = "autor" class = "normal" type = "text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label class= "subtitulo" position="floating">Editorial:</ion-label>
+    <ion-input [(ngModel)] = "editorial" class = "normal" type = "text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label class= "subtitulo" position="floating">Año:</ion-label>
+    <ion-input [(ngModel)] = "year" class = "normal" type = "text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-button class = "subtitulo" color="success"  slot="end" (click) = "guardarLibro()">Aceptar</ion-button>
+    <ion-button [routerLink] = "[('/home')]"  class = "subtitulo" color="danger"  slot="end">Cancelar</ion-button>
+  </ion-item>
+</ion-card>
+</div>
+</ion-content>
+
+

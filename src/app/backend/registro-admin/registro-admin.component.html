@@ -1,0 +1,26 @@
+<div class = "header">
+  <h1 class = "titulo">Librarian UPT</h1>
+</div>
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+        <img src= "assets/logo.png" width="500" style = "align-items: center;">
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label class = "titulo">Usuario</ion-label>
+        <ion-input [(ngModel)] = "usuario" class = "normal" placeholder="Ingresa un nombre de usuario"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label class = "titulo">Datos</ion-label>
+        <ion-input [(ngModel)] = "nombre" class = "normal" placeholder="Nombre"></ion-input>
+        <ion-input [(ngModel)] = "apellidoP" class = "normal" placeholder="Apellido Paterno"></ion-input>
+        <ion-input [(ngModel)] = "apellidoM" class = "normal" placeholder="Apellido Materno"></ion-input>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  <ion-item>
+    <ion-button (click) = "guardarAdmin()" [routerLink] = " [('/admin')] " class = "subtitulo" color="success"  slot="end">Registrarme</ion-button>
+    <ion-button  [routerLink] = "[('/home')]"  class = "subtitulo" color="danger"  slot="end">Cancelar</ion-button>
+  </ion-item>
+</ion-content>
